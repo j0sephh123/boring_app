@@ -1,12 +1,17 @@
-const express  = require('express'),
-      router   = express.Router(),
-      database = require('../models/database');
-// GET
+const express    = require('express'),
+      router     = express.Router(),
+      database   = require('../models/database'),
+      queries    = require('../models/queries'),
+      cars       = require('./cars');
+      
+
+
+router.use('/cars', cars);      
+      // GET 
 router.get('/', (req, res) => {
-  database.query('SELECT * FROM names;', function(err, result, fields){
+  database.query(queries, function(err, result, fields){
     if (err) throw err;
-    console.log(result);
-    res.render('index', {result : result});
+    res.render('arb', {result : result});
   });
 });
 // CREATE ROUTE
