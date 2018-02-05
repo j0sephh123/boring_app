@@ -1,7 +1,7 @@
 const express = require('express'),
           app = express(),
    bodyParser = require('body-parser'),
-       routes = require('./routes/index'),
+       routes = require('./routes/routes'),
        mysql  = require('mysql'),
        methodOverride = require('method-override');
 
