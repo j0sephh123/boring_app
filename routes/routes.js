@@ -2,7 +2,7 @@ const express       = require('express'),
       router        = express.Router(),
       database      = require('../models/database'),
       queries       = require('../models/queries'),
-      cars          = require('./cars'),
+      cvs           = require('./cvs'),
       createRoute   = require('./create'),
       indexRoute    = require('./index'),
       postRoute     = require('./post'),
@@ -13,7 +13,8 @@ const express       = require('express'),
       
 
 
-router.use('/cars', cars); 
+router.use('/cvs', cvs); 
+
 
 router.use(indexRoute)
 router.use(createRoute);
@@ -22,5 +23,9 @@ router.use(showRoute);
 router.use(editRoute);
 router.use(updateRoute);
 router.use(deleteRoute);
+
+router.get('/cvs/:id', (req, res) => {
+      console.log(req.params.id);
+});
 
 module.exports = router;

@@ -5,11 +5,13 @@
 <h2>Edit <%=item.name1%></h2>
 
 <form action="/<%= item.id %>?_method=PUT" method="POST">
-  <input type="text" name="item[name1]"  value="<%=item.name1%>">
-  <input type="text" name="item[name2]"  value="<%=item.name2%>">
+  <input type="text" name="item[inn]"  value="<%=item.inn%>">
+  <input type="text" name="item[dose]"  value="<%=item.dose%>">
   <button class="btn btn-success">Edit</button>
 </form>
 
 <% }); %>
+
+
 
 <% include ./partials/footer %>

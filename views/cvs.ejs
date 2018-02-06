@@ -1,0 +1,19 @@
+<% include partials/header %><br>
+
+
+<% result.forEach((item) => { %>
+<div class="my-item">
+  <ul>
+    <li><%= item.name %></li>
+  </ul>
+  <a href="/cvs/<%=item.id%>"><button class='btn btn-primary'>Show</button></a>
+  <a href="/cvs/<%=item.id%>/edit"><button class='btn btn-success'>Edit</button></a>
+  <form action="/cvs/<%=item.id%>?_method=DELETE" method="post">
+    <button class='btn btn-danger'>Delete</button>
+  </form>
+</div>
+
+
+<% }); %>
+
+<% include partials/footer %>

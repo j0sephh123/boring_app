@@ -1,12 +1,12 @@
 <% include partials/header %><br>
 
-
-<% result.forEach((item) => { %>
+<h1>Here we have to render all the systems... not this</h1>
+<% cvs.forEach((item) => { %>
   <div class="my-item">
     <ul>
       <li>id: <%= item.id %></li>
-      <li>name1: <%= item.name1 %></li>
-      <li>name2: <%= item.name2 %></li>
+      <li>name1: <%= item.inn %></li>
+      <li>name2: <%= item.dose %></li>
     </ul>
     <a href="/<%=item.id%>"><button class='btn btn-primary'>Show</button></a>
     <a href="/<%=item.id%>/edit"><button class='btn btn-success'>Edit</button></a>
